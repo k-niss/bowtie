@@ -4,14 +4,15 @@ One Paragraph of project description goes here
 
 ## Getting Started
 
+```
+# Make sure you have devtools installed and loaded
 install("devtools")
-
 library("devtools")
 
-
+# Then install the bowtie package directly from github
 install_github("KrisNiss/bowtie")
-
 library("bowtie")
+```
 
 ### Prerequisites
 
