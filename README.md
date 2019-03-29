@@ -1,6 +1,6 @@
 # Bowtie
 
-One Paragraph of project description goes here
+Decoding the topology of large networks using wTO matrices
 
 ## Getting Started
 
@@ -20,7 +20,7 @@ You may have to install the github repertoire using R in the terminal instead of
 
 ### Prerequisites
 
-Remember to install and then load the following packages before running
+Remember to install and then load the following packages before using the bowtie functions.
 
 ```
 library(igraph)       # Graph package
@@ -61,15 +61,12 @@ image(wTO_matrix[node_order,node_order], useRaster = T, col = colorRampPalette(b
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+* **Kristoffer Niss** - *Coding and conceptual work* 
+* **Søren Brunak Niss** - *Conceptual work and supervision* 
 
 ## Scientific paper
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+This R package was published in XXX, titlted YYY.
 
 ## License
 
