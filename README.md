@@ -28,63 +28,42 @@ library(parallel)     # For multiprocessing
 library(RColorBrewer) # Nice colors
 ```
 
-### Installing
+## Example
 
-A step by step series of examples that tell you how to get a development env running
+How to create a weighted topological matrix of an igraph object
 
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
+### Tutorial
 
 Explain what these tests test and why
 
 ```
-Give an example
+## 1) Create random graph with weights
+random_graph           = sample_pa(n=100, power = 1.2, directed=F)
+E(random_graph)$weight = runif(n=length(E(random_graph)))
+
+plot(random_graph, vertex.size=2, layout = igraph::layout.gem(random_graph))
+
+## 2) Calculate wTO
+wTO_list = wTO.network(node_vector = as.vector(V(random_graph)), igraph_object = random_graph, thread_numb = 4)
+
+## 3) Turn list into matrix
+wTO_matrix = from.list.to.df(wTO_list)
+
+## 4) Hierarchical ordering of the matrix
+hclust_object = hclust(as.dist(1-wTO_matrix), method = 'average')
+node_order    = hclust_object$labels[hclust_object$order]
+
+## 5) Visualize matrix
+image(wTO_matrix[node_order,node_order], useRaster = T, col = colorRampPalette(brewer.pal(9,"YlGnBu"))(49))
 ```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
+
+* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+
+See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+
+## Scientific paper
 
 * **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
 
