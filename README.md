@@ -36,26 +36,31 @@ How to create a weighted topological matrix of an igraph object
 
 ### Tutorial
 
-Explain what these tests test and why
-
+Create a toy network using the igraph function sample_pa() and visualize it:
 ```
-## 1) Create random graph with weights
 random_graph           = sample_pa(n=100, power = 1.2, directed=F)
 E(random_graph)$weight = runif(n=length(E(random_graph)))
-
 plot(random_graph, vertex.size=2, layout = igraph::layout.gem(random_graph))
+```
 
-## 2) Calculate wTO
+Calculate pariwise weighted topological overlap (wTO) for all node pairs:
+```
 wTO_list = wTO.network(node_vector = as.vector(V(random_graph)), igraph_object = random_graph, thread_numb = 4)
+```
 
-## 3) Turn list into matrix
+Convert the list format into a symmetric wTO matrix:
+```
 wTO_matrix = from.list.to.df(wTO_list)
+```
 
-## 4) Hierarchical ordering of the matrix
+Order the columns and rows of the matrix, to make patterns stand out:
+```
 hclust_object = hclust(as.dist(1-wTO_matrix), method = 'average')
 node_order    = hclust_object$labels[hclust_object$order]
+```
 
-## 5) Visualize matrix
+Visualize the matrix to get an overview of the topology:
+```
 image(wTO_matrix[node_order,node_order], useRaster = T, col = colorRampPalette(brewer.pal(9,"YlGnBu"))(49))
 ```
 
