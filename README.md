@@ -62,7 +62,7 @@ image(wTO_matrix[node_order,node_order], useRaster = T, col = colorRampPalette(b
 ## Authors
 
 * **Kristoffer Niss** - *Coding and conceptual work* 
-* **Søren Brunak Niss** - *Conceptual work and supervision* 
+* **Søren Brunak** - *Conceptual work and supervision* 
 
 ## Scientific paper
 
@@ -74,6 +74,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* Grigory Nos for help with setting up the R package
