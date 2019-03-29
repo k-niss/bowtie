@@ -16,7 +16,7 @@ install_github("KrisNiss/bowtie")
 library("bowtie")
 ```
 
-You may have to install the github repertoire using R in the terminal instead of Rstudio.
+You may have to install the github repertoire using R in the terminal instead of Rstudio. After that you can just restart Rstudio and load the library in the standard way using library(bowtie).
 
 ### Prerequisites
 
