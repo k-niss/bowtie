@@ -18,16 +18,14 @@ You may have to install the github repertoire using R in the terminal instead of
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+Remember to install and then load the following packages before running
 
 ```
-# Remember to install and then load the following packages before running
-library(bowtie)
-library(parallel)
-library(igraph)
-library(reshape2)
-library(pbapply)
-library(RColorBrewer)
+library(igraph)       # Graph package
+library(reshape2)     # Matrix manipulation
+library(pbapply)      # Apply functions with multiprocessing and progress bar
+library(parallel)     # For multiprocessing
+library(RColorBrewer) # Nice colors
 ```
 
 ### Installing
