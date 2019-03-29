@@ -40,18 +40,25 @@ Create a toy network using the igraph function sample_pa() and visualize it:
 ```
 random_graph           = sample_pa(n=100, power = 1.2, directed=F)
 E(random_graph)$weight = runif(n=length(E(random_graph)))
-plot(random_graph, vertex.size=2, layout = igraph::layout.gem(random_graph))
+plot(random_graph, 
+     vertex.size=2, 
+     layout = igraph::layout.gem(random_graph))
 ```
+
 
 Calculate pariwise weighted topological overlap (wTO) for all node pairs:
 ```
-wTO_list = wTO.network(node_vector = as.vector(V(random_graph)), igraph_object = random_graph, thread_numb = 4)
+wTO_list = wTO.network(node_vector = as.vector(V(random_graph)), 
+                       igraph_object = random_graph, 
+                       thread_numb = 2)
 ```
+
 
 Convert the list format into a symmetric wTO matrix:
 ```
 wTO_matrix = from.list.to.df(wTO_list)
 ```
+
 
 Order the columns and rows of the matrix, to make patterns stand out:
 ```
@@ -59,9 +66,12 @@ hclust_object = hclust(as.dist(1-wTO_matrix), method = 'average')
 node_order    = hclust_object$labels[hclust_object$order]
 ```
 
+
 Visualize the matrix to get an overview of the topology:
 ```
-image(wTO_matrix[node_order,node_order], useRaster = T, col = colorRampPalette(brewer.pal(9,"YlGnBu"))(49))
+image(wTO_matrix[node_order,node_order], 
+      useRaster = T, 
+      col = colorRampPalette(brewer.pal(9,"YlGnBu"))(49))
 ```
 
 ## Authors
