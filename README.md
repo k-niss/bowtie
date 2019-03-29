@@ -5,9 +5,12 @@ One Paragraph of project description goes here
 ## Getting Started
 
 install("devtools")
+
 library("devtools")
 
+
 install_github("KrisNiss/bowtie")
+
 library("bowtie")
 
 ### Prerequisites
