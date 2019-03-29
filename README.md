@@ -19,7 +19,13 @@ library("bowtie")
 What things you need to install the software and how to install them
 
 ```
-Give examples
+# Remember to install and then load the following packages before running
+library(bowtie)
+library(parallel)
+library(igraph)
+library(reshape2)
+library(pbapply)
+library(RColorBrewer)
 ```
 
 ### Installing
