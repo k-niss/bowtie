@@ -8,8 +8,15 @@ Description: The topology (layout) of a network is hard to decode using
     uncommon. This package allows the construction of wTO matrices that
     makes the decoding of network topology of even very large networks
     simpler.
-Depends: R (>= 3.5.1)
+Depends: R (>= 3.5.0)
 License: MIT + file LICENSE
+BugReports: https://github.com/KrisNiss/bowtie/issues
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.1
+Imports:
+  igraph,
+  reshape2,
+  pbapply,
+  parallel,
+  RColorBrewer

@@ -3,3 +3,8 @@
 export(from.list.to.df)
 export(wTO.network)
 export(wTO.two.nodes)
+import(RColorBrewer)
+import(igraph)
+import(parallel)
+import(pbapply)
+import(reshape2)
