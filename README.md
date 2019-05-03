@@ -12,7 +12,7 @@ library("devtools")
 
 Then install the bowtie package directly from github
 ```
-install_github("KrisNiss/bowtie")
+install_github("k-niss/bowtie")
 library("bowtie")
 ```
 
@@ -89,4 +89,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Grigory Nos for help with setting up the R package
+* Tibor Varga and Grigory Nos for help with setting up the R package
