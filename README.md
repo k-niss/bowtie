@@ -79,7 +79,7 @@ image(wTO_matrix[node_order,node_order],
 * **PhD Student Kristoffer Niss** - *Coding and conceptual work* 
 * **Professor Søren Brunak** - *Conceptual work and supervision* 
 
-## Affilliation
+## Affiliation
 
 Translational Disease Systems Biology Group, Novo Nordisk Foundation center for Protein Research (CPR), University of Copenhagen, 2200 Copenhagen, Denmark. 
 
