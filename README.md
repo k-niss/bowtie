@@ -1,6 +1,6 @@
 # Bowtie
 
-Decoding the topology of large networks using wTO matrices
+Construction and visualization of weighted topological overlap matrices based on networks. This, in order to decode the topology of networks, especially very large ones of > 1000 nodes or with a low average shortest path.
 
 ## Getting Started
 
