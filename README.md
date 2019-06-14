@@ -81,7 +81,7 @@ image(wTO_matrix[node_order,node_order],
 
 ## Scientific paper
 
-This R package was published in XXX, titlted YYY.
+This R package was published in connection with the article titlted XXX in journal of YYY (2019), doi:.
 
 ## License
 
@@ -89,4 +89,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Tibor Varga and Grigorii Nos for help with setting up the R package
+* Thank you to Tibor Varga and Grigorii Nos for help with setting up the R package
