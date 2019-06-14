@@ -76,8 +76,12 @@ image(wTO_matrix[node_order,node_order],
 
 ## Authors
 
-* **Kristoffer Niss** - *Coding and conceptual work* 
-* **Søren Brunak** - *Conceptual work and supervision* 
+* **PhD Student Kristoffer Niss** - *Coding and conceptual work* 
+* **Professor Søren Brunak** - *Conceptual work and supervision* 
+
+## Affilliation
+
+Translational Disease Systems Biology Group, Novo Nordisk Foundation center for Protein Research (CPR), University of Copenhagen, 2200 Copenhagen, Denmark. 
 
 ## Scientific paper
 
