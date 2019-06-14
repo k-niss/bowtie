@@ -89,4 +89,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Tibor Varga and Grigory Nos for help with setting up the R package
+* Tibor Varga and Grigorii Nos for help with setting up the R package
