@@ -2,8 +2,6 @@
 
 Construction and visualization of weighted topological overlap matrices based on networks. This, in order to decode the topology of networks, especially very large ones of > 1000 nodes or with a low average shortest path.
 
-![A great test simle](https://i.cbc.ca/1.4986551.1548087152!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_780/smile-emoji.jpg)
-
 ## Getting Started
 
 Make sure you have devtools installed and loaded:
