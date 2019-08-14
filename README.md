@@ -1,6 +1,6 @@
 # Bowtie
 
-Construction and visualization of weighted topological overlap matrices based on networks. This, in order to decode the topology of networks, especially very large ones of > 1000 nodes or with a low average shortest path.
+Decoding the topology of large networks by construction and visualization of weighted topological overlap matrices to mine their functional information. This R package applies multiprocessing to increase the wTO calculation speed.
 
 ## Getting Started
 
@@ -85,7 +85,7 @@ Translational Disease Systems Biology Group, Novo Nordisk Foundation center for 
 
 ## Scientific paper
 
-This R package was published in connection with the article titlted XXX in journal of YYY (2019), doi:.
+This R package is not published yet. 
 
 ## License
 
