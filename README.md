@@ -1,6 +1,6 @@
 # Bowtie
 
-Decoding the topology of large networks using wTO matrices
+Decoding the topology of large networks by constructing and visualizing weighted topological overlap (wTO) matrices to allow the mining of the functional information encoded in the topology. This R package applies multiprocessing to increase the wTO matrix calculation speed.
 
 ## Getting Started
 
@@ -12,7 +12,7 @@ library("devtools")
 
 Then install the bowtie package directly from github
 ```
-install_github("KrisNiss/bowtie")
+install_github("k-niss/bowtie")
 library("bowtie")
 ```
 
@@ -76,12 +76,16 @@ image(wTO_matrix[node_order,node_order],
 
 ## Authors
 
-* **Kristoffer Niss** - *Coding and conceptual work* 
-* **Søren Brunak** - *Conceptual work and supervision* 
+* **PhD Student Kristoffer Niss** - *Coding and conceptual work* 
+* **Professor Søren Brunak** - *Conceptual work and supervision* 
+
+## Affiliation
+
+Translational Disease Systems Biology Group, Novo Nordisk Foundation center for Protein Research (CPR), University of Copenhagen, 2200 Copenhagen, Denmark. 
 
 ## Scientific paper
 
-This R package was published in XXX, titlted YYY.
+This R package is not published yet. 
 
 ## License
 
@@ -89,4 +93,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Grigory Nos for help with setting up the R package
+* Thank you to Tibor Varga and Grigorii Nos for help with setting up the R package
