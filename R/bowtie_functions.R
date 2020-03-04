@@ -436,8 +436,8 @@ find_bowties = function(full_matrix, protein_complex_areas, int_fan_min_size=10,
 
   # 1B) Get protein complex ranges
   complex_areas         = list()
-  complex_ranges_vector = unlist(lapply(prot_complex_ranges_merged_filt, function(x) paste(x[1], x[2], sep='_')))
-  for (i in prot_complex_ranges_merged_filt){
+  complex_ranges_vector = unlist(lapply(protein_complex_areas, function(x) paste(x[1], x[2], sep='_')))
+  for (i in protein_complex_areas){
     start    = i[1]
     end      = i[2]
     proteins = colnames(int_matrix_all)[start:end]
@@ -488,7 +488,7 @@ find_bowties = function(full_matrix, protein_complex_areas, int_fan_min_size=10,
       fans_in_complex = 'no'
       complex_numb2   = 0
       c_count         = 0
-      for (prot_comp_range in prot_complex_ranges_merged_filt){
+      for (prot_comp_range in protein_complex_areas){
         c_count      = c_count+1
         all_indicies = c(prot_comp_range[1]:prot_comp_range[2])
         status       = bowtie_fan_range %in% all_indicies
