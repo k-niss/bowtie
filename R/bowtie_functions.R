@@ -26,7 +26,7 @@
 #' image(wTO_matrix[node_order,node_order], useRaster = T, col = colorRampPalette(brewer.pal(9,"YlGnBu"))(49))
 #'
 
-wTO.two.nodes = function(igraph_obj, node1_id, node2_id, node_vector, neighbour_list){
+wTO_two_nodes = function(igraph_obj, node1_id, node2_id, node_vector, neighbour_list){
   if (node1_id == node2_id){
     w_TO = NA
   }else{
@@ -91,7 +91,7 @@ wTO.two.nodes = function(igraph_obj, node1_id, node2_id, node_vector, neighbour_
 #' image(wTO_matrix[node_order,node_order], useRaster = T, col = colorRampPalette(brewer.pal(9,"YlGnBu"))(49))
 #'
 
-wTO.network = function(igraph_object, node_vector, thread_numb=1){
+wTO_network = function(igraph_object, node_vector, thread_numb=1){
 
   # multithreading
   clust_obj = makeCluster(thread_numb, type="FORK")
@@ -151,7 +151,7 @@ wTO.network = function(igraph_object, node_vector, thread_numb=1){
 #' image(wTO_matrix[node_order,node_order], useRaster = T, col = colorRampPalette(brewer.pal(9,"YlGnBu"))(49))
 #'
 
-from.list.to.df = function(score_list){
+from_list_to_df = function(score_list){
   # convert
   topo_df           = data.frame(matrix(unlist(score_list), ncol = 3, byrow = F), stringsAsFactors = F)
   colnames(topo_df) = c('int1', 'int2', 's')
@@ -187,7 +187,7 @@ from.list.to.df = function(score_list){
 #' @examples
 #'
 
-find.complexes = function(full_matrix, min_conf_score=0.75, max_complex_size=500, give_up_expand=50){
+find_complexes = function(full_matrix, min_conf_score=0.75, max_complex_size=500, give_up_expand=50){
 
   # Collector
   prot_complex_ranges = list()
@@ -254,7 +254,7 @@ find.complexes = function(full_matrix, min_conf_score=0.75, max_complex_size=500
 #' @examples
 #'
 
-merge.complexes = function(prot_complex_ranges, merge_if_overlap=1, min_complex_size=8){
+merge_complexes = function(prot_complex_ranges, merge_if_overlap=1, min_complex_size=8){
 
   prot_complex_ranges_merged = list()
   range_count                = 0
@@ -411,12 +411,12 @@ consecutive_str = function(input_vector, window_length, min_value){
 #' @examples
 #'
 
-find.bowties = function(full_matrix, protein_complex_areas, int_fan_min_size=10, int_fan_avg_conf_score=0.9){
+find_bowties = function(full_matrix, protein_complex_areas, int_fan_min_size=10, int_fan_avg_conf_score=0.9){
 
   # 1A) Find lines of correct size and score
   cat('# Searching for interaction fans of bow-ties...\n')
   collected_bowties = list()
-  for (row_count in 1:length(all_proteins)){
+  for (row_count in 1:dim(full_matrix)[1]){
     row_vect   = full_matrix[row_count,]
 
     if (sum(row_vect) >= (int_fan_min_size*int_fan_avg_conf_score)){
