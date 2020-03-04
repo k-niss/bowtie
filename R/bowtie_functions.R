@@ -427,7 +427,7 @@ find_bowties = function(full_matrix, protein_complex_areas, int_fan_min_size=10,
       # save interaction fans
       ct = 1
       for (index_set in index_list){
-        knot = all_proteins[row_count]
+        knot = rownames(full_matrix)[row_count]
         collected_bowties[[knot]][[ct]] = c(min(index_set), max(index_set))
         ct = ct+1
       }
