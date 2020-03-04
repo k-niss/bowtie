@@ -117,7 +117,7 @@ wTO_network = function(igraph_object, node_vector, thread_numb=1){
 
   # calculate topological overlap
   cat('# Calculating pairwise wTO\n')
-  all_scores = pbapply(all_pairwise, 2, function(x) wTO.two.nodes(igraph_object, x[1], x[2], node_vector, ngb_list), cl=clust_obj)
+  all_scores = pbapply(all_pairwise, 2, function(x) wTO_two_nodes(igraph_object, x[1], x[2], node_vector, ngb_list), cl=clust_obj)
   stopCluster(clust_obj)
 
   # append
