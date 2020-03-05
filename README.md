@@ -30,11 +30,11 @@ library(parallel)     # For multiprocessing
 library(RColorBrewer) # Nice colors
 ```
 
-## Example
+## Tutorials
 
-How to create a weighted topological matrix of an igraph object
+Text.
 
-### Tutorial
+### Tutorial part A: Creating and visualizing a wTO matrix
 
 Create a toy network using the igraph function sample_pa() and visualize it:
 ```
@@ -68,7 +68,7 @@ node_order    = hclust_object$labels[hclust_object$order]
 
 
 Visualize the matrix to get an overview of the topology:
-```
+```R
 image(wTO_matrix[node_order,node_order], 
       useRaster = T, 
       col = colorRampPalette(brewer.pal(9,"YlGnBu"))(49))
