@@ -44,10 +44,10 @@ plot(random_graph, vertex.size=2, layout=igraph::layout.gem(random_graph))
 ```
 
 <p align="center">
-  <img src="./test_network.png" width="500" alt="accessibility text">
+  <img src="./test_network.png" width="500" alt="toy graph">
 </p>
 
-The algorithm will create a graph similar to the one above.
+The algorithm will create a graph resembling the one above.
 
 Calculate pariwise weighted topological overlap (wTO) for all node pairs:
 ```R
@@ -72,6 +72,10 @@ Visualize the matrix to get an overview of the topology:
 ```R
 image(wTO_matrix[node_order,node_order], useRaster=T, col=colorRampPalette(brewer.pal(9,"YlGnBu"))(49))
 ```
+
+<p align="center">
+  <img src="./test_wTO_matrix.png" width="500" alt="wTO network">
+</p>
 
 ### Tutorial part B: Locating protein complexes and bow-tie motifs
 
