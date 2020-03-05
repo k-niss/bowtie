@@ -44,9 +44,10 @@ plot(random_graph, vertex.size=2, layout=igraph::layout.gem(random_graph))
 ```
 
 <p align="center">
-  <img src="./test_network.png" width="350" alt="accessibility text">
+  <img src="./test_network.png" width="500" alt="accessibility text">
 </p>
 
+The algorithm will create a graph similar to the one above.
 
 Calculate pariwise weighted topological overlap (wTO) for all node pairs:
 ```R
