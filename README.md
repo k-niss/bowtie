@@ -111,6 +111,27 @@ protein_complexes_merged = merge_complexes(protein_complex_areas)
 ```
 
 
+We can highlight the areas that we have marked as protein complexes with red (lower matrix).
+```R
+quick_matrix  = matrix(nrow = dim(cDC1_adj_matrix_sub)[1], ncol = dim(cDC1_adj_matrix_sub)[1], data = 0)
+
+for (i in protein_complexes_merged){
+  start = head(i, n=1)
+  end   = tail(i, n=1)
+  quick_matrix[start:end, start:end] = 2
+}
+
+quick_matrix[upper.tri(quick_matrix)] = cDC1_adj_matrix_sub[upper.tri(cDC1_adj_matrix_sub)]
+grey_scale                            = colorRampPalette(brewer.pal(9,"Greys"))(21)
+
+par(bg="white")
+image(quick_matrix, useRaster = T,  col = c(grey_scale, 'red'), breaks = c(seq(0,1,0.05), 1.01, 2))
+```
+
+<p align="center">
+  <img src="./highlighting_prot_complexes.png" width="500" alt="protein complex highlight">
+</p>
+
 We then locate the bow-tie motifs in the adjacency matrix.
 ```R
 knot_proteins_and_fans = find_bowties(full_matrix = cDC1_adj_matrix_sub, protein_complex_areas = protein_complexes_merged)
