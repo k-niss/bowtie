@@ -129,7 +129,7 @@ image(quick_matrix, useRaster = T,  col = c(grey_scale, 'red'), breaks = c(seq(0
 ```
 
 <p align="center">
-  <img src="./highlighting_prot_complexes.png" width="500" alt="toy graph">
+  <img src="./highlighting_prot_complexes.png" width="500" alt="protein complex highlight">
 </p>
 
 We then locate the bow-tie motifs in the adjacency matrix.
