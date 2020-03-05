@@ -5,24 +5,24 @@ Decoding the topology of large networks by constructing and visualizing weighted
 ## Getting Started
 
 Make sure you have devtools installed and loaded:
-```
+```R
 install("devtools")
 library("devtools")
 ```
 
 Then install the bowtie package directly from github
-```
+```R
 install_github("k-niss/bowtie")
 library("bowtie")
 ```
 
-You may have to install the github repertoire using R in the terminal instead of Rstudio. After that you can just restart Rstudio and load the library in the standard way using library(bowtie).
+You may have to install the github repertoire using R in the terminal instead of in Rstudio. After that you can just restart Rstudio and load the library in the standard way using library(bowtie).
 
 ### Prerequisites
 
 Remember to install and then load the following packages before using the bowtie functions.
 
-```
+```R
 library(igraph)       # Graph package
 library(reshape2)     # Matrix manipulation
 library(pbapply)      # Apply functions with multiprocessing and progress bar
@@ -74,7 +74,7 @@ image(wTO_matrix[node_order,node_order],
       col = colorRampPalette(brewer.pal(9,"YlGnBu"))(49))
 ```
 
-### Tutorial part B: 
+### Tutorial part B: Locating protein complexes and bow-tie motifs
 
 Since the toy network in part A do not contain modular structures, we load an adjacency matrix of the cDC1 cell, which is included in the bowtie R package.
 ```R
