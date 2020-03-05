@@ -43,7 +43,9 @@ E(random_graph)$weight = runif(n=length(E(random_graph)))
 plot(random_graph, vertex.size=2, layout=igraph::layout.gem(random_graph))
 ```
 
-![alt text](./test_network.png)
+<p align="center">
+  <img src="./test_network.png" width="350" alt="accessibility text">
+</p>
 
 
 Calculate pariwise weighted topological overlap (wTO) for all node pairs:
