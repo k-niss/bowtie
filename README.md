@@ -43,6 +43,8 @@ E(random_graph)$weight = runif(n=length(E(random_graph)))
 plot(random_graph, vertex.size=2, layout=igraph::layout.gem(random_graph))
 ```
 
+![alt text](./test_network.png)
+
 
 Calculate pariwise weighted topological overlap (wTO) for all node pairs:
 ```R
@@ -67,8 +69,6 @@ Visualize the matrix to get an overview of the topology:
 ```R
 image(wTO_matrix[node_order,node_order], useRaster=T, col=colorRampPalette(brewer.pal(9,"YlGnBu"))(49))
 ```
-
-![alt text](https://github.com/k-niss/bowtie/blob/master/test_network.png)
 
 ### Tutorial part B: Locating protein complexes and bow-tie motifs
 
