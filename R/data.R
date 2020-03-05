@@ -14,4 +14,4 @@
 #'
 #' @examples
 #' data(cDC1_adj_matrix)
-"cDC1_adj_matrix"
+"cDC1"
