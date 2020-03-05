@@ -440,7 +440,7 @@ find_bowties = function(full_matrix, protein_complex_areas, int_fan_min_size=10,
   for (i in protein_complex_areas){
     start    = i[1]
     end      = i[2]
-    proteins = colnames(int_matrix_all)[start:end]
+    proteins = colnames(full_matrix)[start:end]
 
     for (prot in proteins){
       complex_areas[[prot]] = c(start, end)
