@@ -75,6 +75,19 @@ Since the toy network in part A do not contain modular structures, we load an ad
 data()
 ```
 
+
+We locate the protein complexes in the adjacency matrix.
+```R
+protein_complex_areas    = find_complexes(full_matrix = int_matrix_all)
+protein_complexes_merged = merge_complexes(protein_complex_areas)
+```
+
+
+We then locate the bow-tie motifs in the adjacency matrix.
+```R
+knot_proteins_and_fans = find_bowties(full_matrix = int_matrix_all, protein_complex_areas = protein_complexes_merged)
+```
+
 ## Authors
 
 * **PhD Student Kristoffer Niss** - *Coding and conceptual work* 
