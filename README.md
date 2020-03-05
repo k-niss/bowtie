@@ -77,6 +77,8 @@ image(wTO_matrix[node_order,node_order], useRaster=T, col=colorRampPalette(brewe
   <img src="./test_wTO_matrix.png" width="500" alt="wTO network">
 </p>
 
+It is clear from the visualization that the network does not contain modular strucutres. However, we can observe highly connected nodes, i.e. hubs.
+
 ### Tutorial part B: Locating protein complexes and bow-tie motifs
 
 Since the toy network in part A do not contain modular structures, we load an adjacency matrix of the cDC1 cell, which is included in the bowtie R package.
