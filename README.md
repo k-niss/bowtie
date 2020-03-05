@@ -2,7 +2,8 @@
 
 Decoding the topology of large networks by constructing and visualizing weighted topological overlap (wTO) matrices to allow the mining of the functional information encoded in the topology. This R package applies multiprocessing to increase the wTO matrix calculation speed.
 
-##### Table of Contents  
+### Table of Contents  
+[Getting Started](#getting started)
 [Tutorials](#tutorials)
 
 ## Getting Started
