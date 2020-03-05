@@ -99,20 +99,21 @@ It is clear from the visualization that the network does not contain modular str
 
 Since the toy network in part A do not contain modular structures, we load an adjacency matrix of the cDC1 cell, which is included in the bowtie R package.
 ```R
-data()
+data(cDC1_adj_matrix)
+cDC1_adj_matrix_sub = cDC1_adj_matrix[400:600, 400:600]
 ```
 
 
 We locate the protein complexes in the adjacency matrix.
 ```R
-protein_complex_areas    = find_complexes(full_matrix = int_matrix_all)
+protein_complex_areas    = find_complexes(full_matrix = cDC1_adj_matrix_sub)
 protein_complexes_merged = merge_complexes(protein_complex_areas)
 ```
 
 
 We then locate the bow-tie motifs in the adjacency matrix.
 ```R
-knot_proteins_and_fans = find_bowties(full_matrix = int_matrix_all, protein_complex_areas = protein_complexes_merged)
+knot_proteins_and_fans = find_bowties(full_matrix = cDC1_adj_matrix_sub, protein_complex_areas = protein_complexes_merged)
 ```
 
 ## Authors
