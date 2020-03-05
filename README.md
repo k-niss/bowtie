@@ -23,11 +23,11 @@ You may have to install the github repertoire using R in the terminal instead of
 Remember to install and then load the following packages before using the bowtie functions.
 
 ```R
-library(igraph)       # Graph package
-library(reshape2)     # Matrix manipulation
-library(pbapply)      # Apply functions with multiprocessing and progress bar
-library(parallel)     # For multiprocessing
-library(RColorBrewer) # Nice colors
+library("igraph")       # Graph package
+library("reshape2")     # Matrix manipulation
+library("pbapply")      # Apply functions with multiprocessing and progress bar
+library("parallel")     # For multiprocessing
+library("RColorBrewer") # Nice colors
 ```
 
 ## Tutorials
