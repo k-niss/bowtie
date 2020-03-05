@@ -111,7 +111,7 @@ protein_complexes_merged = merge_complexes(protein_complex_areas)
 ```
 
 
-We can visualize what areas we have marked as protein complexes.
+We can highlight the areas that we have marked as protein complexes with red (lower matrix).
 ```R
 quick_matrix  = matrix(nrow = dim(cDC1_adj_matrix_sub)[1], ncol = dim(cDC1_adj_matrix_sub)[1], data = 0)
 
@@ -128,6 +128,9 @@ par(bg="white")
 image(quick_matrix, useRaster = T,  col = c(grey_scale, 'red'), breaks = c(seq(0,1,0.05), 1.01, 2))
 ```
 
+<p align="center">
+  <img src="./highlighting_prot_complexes.png" width="500" alt="toy graph">
+</p>
 
 We then locate the bow-tie motifs in the adjacency matrix.
 ```R
