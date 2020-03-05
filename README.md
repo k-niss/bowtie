@@ -4,12 +4,19 @@ Decoding the topology of large networks by constructing and visualizing weighted
 
 ### Table of Contents  
 [Getting Started](#getting-started)
+
 [Prerequisites](#prerequisites)
+
 [Tutorials](#tutorials)
+
 [Authors](#authors)
+
 [Affiliation](#affiliation)
+
 [Scientific paper](#scientific-paper)
+
 [Acknowledgments](#acknowledgments)
+
 
 ## Getting Started
 
