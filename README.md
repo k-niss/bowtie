@@ -48,7 +48,7 @@ library("RColorBrewer") # Nice colors
 
 ## Tutorials
 
-Below in part A, we present how to calculate a wTO matrix based on an igraph object and followlingly how to visualize it. In part B, we illustrate how to extract protein complexes and knot proteins from a network adjacency matrix of direct interaction scores and how to visualize the results.
+In part A, we present how to calculate a wTO matrix based on an igraph object and followlingly how to visualize it. We use a toy network to reduce computation time of the tutorial. In part B, we illustrate how to extract protein complexes and knot proteins from a network adjacency matrix of direct interaction scores and how to visualize the results.
 
 ### Tutorial part A: Creating and visualizing a wTO matrix
 
