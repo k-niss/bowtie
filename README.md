@@ -97,7 +97,7 @@ It is clear from the visualization that the network does not contain modular str
 
 ### Tutorial part B: Locating protein complexes and bow-tie motifs
 
-Since the toy network in part A do not contain modular structures, we load an adjacency matrix of the cDC1 cell, which is included in the bowtie R package.
+Since the toy network in part A do not contain modular structures, we load an adjacency matrix of the cDC1 cell, which is included in the bowtie R package. We will use only a subset of it in this tutorial.
 ```R
 data(cDC1_adj_matrix)
 cDC1_adj_matrix_sub = cDC1_adj_matrix[400:600, 400:600]
