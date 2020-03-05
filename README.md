@@ -32,12 +32,12 @@ library(RColorBrewer) # Nice colors
 
 ## Tutorials
 
-Text.
+Below in part A, we present how to calculate a wTO matrix based on an igraph object and followlingly how to visualize it. In part B, we illustrate how to extract protein complexes and knot proteins from a network adjacency matrix of direct interaction scores and how to visualize the results.
 
 ### Tutorial part A: Creating and visualizing a wTO matrix
 
 Create a toy network using the igraph function sample_pa() and visualize it:
-```
+```R
 random_graph           = sample_pa(n=100, power = 1.2, directed=F)
 E(random_graph)$weight = runif(n=length(E(random_graph)))
 plot(random_graph, 
@@ -47,7 +47,7 @@ plot(random_graph,
 
 
 Calculate pariwise weighted topological overlap (wTO) for all node pairs:
-```
+```R
 wTO_list = wTO.network(node_vector = as.vector(V(random_graph)), 
                        igraph_object = random_graph, 
                        thread_numb = 2)
@@ -55,17 +55,26 @@ wTO_list = wTO.network(node_vector = as.vector(V(random_graph)),
 
 
 Convert the list format into a symmetric wTO matrix:
-```
+```R
 wTO_matrix = from.list.to.df(wTO_list)
 ```
 
 
 Order the columns and rows of the matrix, to make patterns stand out:
-```
+```R
 hclust_object = hclust(as.dist(1-wTO_matrix), method = 'average')
 node_order    = hclust_object$labels[hclust_object$order]
 ```
 
+
+Visualize the matrix to get an overview of the topology:
+```R
+image(wTO_matrix[node_order,node_order], 
+      useRaster = T, 
+      col = colorRampPalette(brewer.pal(9,"YlGnBu"))(49))
+```
+
+### Tutorial part B: 
 
 Visualize the matrix to get an overview of the topology:
 ```R
