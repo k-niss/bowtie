@@ -103,6 +103,9 @@ data(cDC1_adj_matrix)
 cDC1_adj_matrix_sub = cDC1_adj_matrix[400:600, 400:600]
 ```
 
+<p align="center">
+  <img src="./adj_sub_matrix.png" width="500" alt="adjacency matrix">
+</p>
 
 We locate the protein complexes in the adjacency matrix.
 ```R
@@ -155,7 +158,7 @@ image(data.matrix(int_matrix_combi), useRaster=T, col = col_scale, breaks = c(se
 ```
 
 <p align="center">
-  <img src="./highlight_bowties.png" width="500" alt="protein complex highlight">
+  <img src="./highlight_bowties.png" width="500" alt="interaction fan highlight">
 </p>
 
 ## Authors
