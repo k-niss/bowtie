@@ -13,7 +13,7 @@ Decoding the topology of large networks by constructing and visualizing weighted
 
 [Affiliation](#affiliation)
 
-[Scientific paper](#scientific-paper)
+[Publication](#publication)
 
 [Acknowledgments](#acknowledgments)
 
@@ -170,7 +170,7 @@ image(data.matrix(int_matrix_combi), useRaster=T, col = col_scale, breaks = c(se
 
 Translational Disease Systems Biology Group, Novo Nordisk Foundation center for Protein Research (CPR), University of Copenhagen, 2200 Copenhagen, Denmark. 
 
-## Scientific paper
+## Publication
 
 This R package is not published yet. 
 
