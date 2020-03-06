@@ -1,6 +1,6 @@
 # Bowtie
 
-Decoding the topology of large networks by constructing and visualizing weighted topological overlap (wTO) matrices to allow the mining of the functional information encoded in the topology. This R package applies multiprocessing to increase the wTO matrix calculation speed.
+This is an R package containing functions to construct and visualize weighted topological overlap (wTO) matrices based on weighted networks (tutorial part A). Functions for finding, extracting and highlighting protein complexes and bow-tie motif interaction fans are included as well (tutorial part B).
 
 ### Table of Contents  
 [Getting Started](#getting-started)
